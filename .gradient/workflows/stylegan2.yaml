@@ -26,7 +26,7 @@ jobs:
       generatedFaces:
         type: dataset
         with:
-          ref: demo-dataset
+          ref: flowersandstatues
     uses: script@v1
     with:
       script: |-
