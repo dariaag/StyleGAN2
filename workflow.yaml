@@ -7,7 +7,7 @@ jobs:
         type: volume
     uses: git-checkout@v1
     with:
-      url: https://github.com/NVlabs/stylegan2.git
+      url: https://github.com/dariaag/StyleGAN2.git
   StyleGan2:
     resources:
       instance-type: P4000
@@ -19,7 +19,7 @@ jobs:
       generatedFaces:
         type: dataset
         with:
-          ref: dstlr2y5x474me3
+          ref: dstdfb6rtbqaqum
     uses: script@v1
     with:
       script: |-
@@ -31,5 +31,5 @@ jobs:
           --network=gdrive:networks/stylegan2-ffhq-config-f.pkl \
           --seeds=6600-6605 \
           --truncation-psi=0.5 \
-          --result-dir=/outputs/generatedFaces
+          --result-dir=/outputs/flowers
       image: tensorflow/tensorflow:1.14.0-gpu-py3
